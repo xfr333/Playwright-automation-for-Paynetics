@@ -1,3 +1,4 @@
+
 # Paynetics Website Automation
 
 Automated test suite for https://www.paynetics.digital built with Playwright and TypeScript.
