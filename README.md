@@ -10,12 +10,12 @@ Automated test suite for https://www.paynetics.digital built with Playwright and
 
 ## Project Structure
 
-TestPlan.txt           - Short test plan, because we talk about it in the interview
+TestPlan.txt           - Short test plan, because we talk about it in the interview;
 tests/
   pages/
-    HomePage.ts        - POM class for the main page navigation
-    FintechsPage.ts    - POM class for the Fintechs page and Cookiebot interception
-  paynetics.spec.ts    - Main test file
+    HomePage.ts        - POM class for the main page navigation;
+    FintechsPage.ts    - POM class for the Fintechs page and Cookiebot interception;
+  paynetics.spec.ts    - Main test file;
 
 ## Installation
 
