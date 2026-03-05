@@ -1,0 +1,55 @@
+Test Plan for Paynetics Website Automation
+
+1 - Scope:
+
+- This test plan covers two automated tests for the public website [www.paynetics.digital](http://www.paynetics.digital).
+- UI test – navigation through the main menu to the Fintechs page.
+- API test – validation of the Cookiebot cookie consent configuration that loads when the Fintechs page is opened.
+- The tests focus only on this navigation flow and the related network request. Authentication, form submissions, mobile layouts, and other sections of the website are not included in the scope.
+
+2 - Objective:
+
+-The purpose of these tests is to confirm that the user can navigate from the main menu to the Fintechs page and that the page loads correctly.
+-Additionally, the tests verify that the Cookiebot configuration request is triggered and returns a valid response, which indicates that the cookie consent setup is working properly.
+
+3 - Environment:
+
+-Target website: https://www.paynetics.digital
+-Browser: Chromium (Playwright default)
+-Operating system: Linux, Windows or macOS
+-Network: public internet connection
+-Test data: none required
+
+4 - Tools:
+
+-Playwright – used for browser automation and capturing network responses.
+-JavaScript/TypeScript – used for writing the automated tests.
+-Node.js – runtime environment for running the tests.
+
+-The Page Object Model approach is used to keep page locators and actions separate from the test logic.
+
+5 - Entry Criteria:
+
+-Playwright is installed and configured in the project.
+-The website https://www.paynetics.digital is accessible.
+
+6 - Exit Criteria:
+
+-Both tests run successfully without failures.
+-The UI test confirms that navigation through Use Cases - Fintechs opens the correct page URL.
+-The API test confirms that the Cookiebot configuration request returns HTTP status 200 and a valid JSON response.
+
+7 - Test Cases:
+
+-TC-001 – UI Test
+    Navigate through the main menu to the Fintechs page.
+    Expected result: the browser URL equals /fintechs/.
+
+-TC-002 – API Test
+    Validate the Cookiebot configuration request triggered when the page loads.
+    Expected result: HTTP 200 response and valid configuration data.
+
+8 - Notes:
+
+-The UI and API tests are independent from each other. The API test opens the Fintechs page directly so that it can run even if the UI navigation test fails.
+-The Cookiebot request is captured using page.waitForResponse(), which allows the test to detect the request dynamically instead of relying on a fixed URL.
