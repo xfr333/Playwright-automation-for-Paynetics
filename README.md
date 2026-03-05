@@ -19,11 +19,11 @@ Automated test suite for https://www.paynetics.digital built with Playwright and
 
 ## Installation
 
-npm install
-npx playwright install
+- npm install
+- npx playwright install
 
 ## Run Tests
 
-npx playwright test
-npx playwright test --headed
-npx playwright show-report
+- npx playwright test
+- npx playwright test --headed
+- npx playwright show-report
